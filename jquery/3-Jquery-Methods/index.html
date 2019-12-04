@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+
+<style>
+    .highLight{
+        background-color: yellow;
+    }
+    
+    
+    .green{
+        background-color: green;
+    }
+</style>
+
+
+<body>
+
+    <!--  
+
+     Jquery Methods(En Çok Kullanılan)
+     
+        --- css()
+        --- text()
+        --- val()
+        --- attr()
+        --- html()
+        --- addClass()
+        --- removeClass()
+        --- toggleClass()
+     -->
+
+    <h1>Jquery Helper Methods</h1>
+
+    <ul>
+        <li>Juqeery Slectors</li>
+        <li>Yılmaz zEREn</li>
+        <li>Naber nasılsın</li>
+    </ul>
+
+    <input id="ad" type="text" placeholder="adınız" value="fonksiyon">
+    <input id="soyad" class="green" type="text" placeholder="soyadınız">
+    <button id="btnKaydet" onclick="adsoyad();">tıkla</button>
+
+    <img src="https://i.pinimg.com/originals/4f/17/31/4f1731e34d4a968a7cd9a567bf691d34.png" width="150px" alt="">
+    <script>
+        console.log($("h1").text()); //h1 in textinde ne var gösterir.
+
+        console.log($("ul").text()); // ul nin içindeki text leri getirir.Alt Alta
+
+        console.log($("ul li").text()); // yan yana getirir.
+
+        $("h1").text("javascript"); //içine yazrsan değişir.
+
+        console.log($("input").val()); //val metdu mesela inputa bir value atadık. bunu yazrsak bu değeri bize getirir.
+
+        $("input").val("Yılmaz zeren"); //bu şekildede değiştirebiliriz.
+
+        function adsoyad() {
+            const ad = $("#ad").val();
+            const soyad = $("#soyad").val();
+            console.log("adınız ve sodayınız:" + ad + soyad)
+            
+            $("#ad").addClass("highLight");//class ekler.
+            $("#soyad").removeClass("green");//class siler.
+            
+        }
+        
+        // toggleClass ise class ekliyse çıkarır değilse ekler. mesela yukarıda ki örnekte yapsak. Butona tıklandıgında eklı degıse ekler bır daha tıklarsa tam tersını ypar.
+        
+        
+        $("img").attr("width","200px")// image in width attributene ulaştık ve ozelliği değiştrdik.
+        
+        
+        
+        
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <a href="#">link</a>
+    <h3 id="header"> JQuery Dersleri</h3>
+    <ul id="liste">
+        <li class="item">Jquery Reference</li>
+        <li>Selectors <a href="#">link</a></li>
+        <li class="item">Jquery Plugins</li>
+    </ul>
+
+
+
+    <script>
+        //css özelliği vermek için örnek kullanım.
+        //.css(özellik,değer)
+        $('#header').css("color","blue");//h3 mavi olur
+        
+        $("#liste a").css("text-decoration","none");// ul altındaki a etiketinin alt çizgisi gider.
+        
+        const styles={
+            color:"yellow",
+            fontSize:"20px",        // toplu css özelliği için 
+            border:"1px solid red"
+        };
+        
+        $("ul li").css(styles); // kullanımıda bu şekilde.
+        
+        
+        // İlla yukardaki gibi değişken tanımlamana da gerek yok. Şu şekilde
+        
+        $("a").css({
+            color:"black",
+            fontSize:"20px",
+        });
+        
+        
+        
+        //bu olayı js ile nasıl yapradık? Baya rahatlatıyor.
+        
+        var listeler=document.querySelectorAll("li");
+        for(var i=0; i<listeler.length; i++){
+            listeler[i].style.color="red";
+        }
+        
+        
+        
+        
+        
+        
+    </script>
+
+</body>
+
+</html>

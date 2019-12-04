@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--  
+    
+            Jquery Events
+        
+        $(document).ready()
+        click()
+        dblclick()
+        change()
+        mauseenter()
+        mauseleave()
+        mausedown()
+        mauseup()
+        hover()
+        focus()
+        blur()
+        on()    
+   
+    
+    -->
+
+
+    <p>Ad:
+        <input class="control" type="text">
+    </p>
+
+    <p>
+        hobiler:
+        <select class="control">
+            <option value="spor" selected="selected">Spor yapmak</option>
+            <option value="sinema">Sinema</option>
+        </select>
+    </p>
+
+    
+    
+    
+    <script>
+    
+        $(document).ready(function(){
+            
+            $(".control").change(function(){
+               console.log($(this).val());
+                
+            });
+            
+            
+            
+        });
+    
+        
+        //Change methodu bir objemizin içeriği değiştiğinde yakalamamızı sağlıyor.
+
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+</body>
+
+</html>

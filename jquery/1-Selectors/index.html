@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h3>JQuery Dersleri</h3>
+    <ul id="liste">
+        <li class="item">Jquery Reference</li>
+        <li>Selectors <a href="#">link</a></li>
+        <li class="item">Jquery Plugins</li>
+    </ul>
+
+
+
+
+
+    <script>
+    // js de mesela document.getElementById seçerdik bunda ise dolar işareti ile herhangi bir id,class veya tag name seçebiliriz.
+    
+        console.log($("#liste")); //id'si liste olan seçildi.
+        console.log($("h3"));// h3 seçildi. 
+        console.log($("li")); //li etkieti seçildi. 
+        console.log($(".item"));//class item olan seçildi
+        console.log($("a"));// tüm a etiketleri gelir.
+        console.log($("ul li a"));//ul altında li altında a gelir.
+    </script>
+
+
+</body>
+
+</html>

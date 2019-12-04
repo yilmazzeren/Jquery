@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <p>Sıfırdan Web Developer Eğitimi</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="hidespeed">Hide</button>
+    <button id="showspeed">Show</button>
+    <button id="togglespeed">Toggle</button>
+    <script>
+        
+        
+        $(document).ready(function(){
+           
+            $("#hide").click(function(){
+               
+               $("p").hide(); 
+                
+            });
+            $("#show").click(function(){
+               
+               $("p").show(); 
+                
+            });
+            $("#toggle").click(function(){
+               
+               $("p").toggle(); 
+                
+            });
+          
+        });
+        
+     // hide metodu burda paragrafı gizler. Show ise gösterir. Display özelliğne none dyor aslında.
+    // toggle komuta da hem gizler bır daha basarsan gösterir.
+        
+        
+        /*bunların kullanımı normalde şu şekilde.
+        
+        
+        $(selector).show(speed,callback)
+        $(selector).hide(speed,callback)
+        $(selector).toggle(speed,callback)
+        
+        speed kısmı milisaniye cinsinden olur. Speed yerine slow ya da fast de yazabiliriz.
+        callback ise yapılan işlem bittikten sonra(show,hide,toggle) gerçekleştirmek istediğin fonksiyonu gibi düşün buraya yazarsın. Animasyon gibi yani.
+        */
+        
+        $(document).ready(function(){
+           
+            $("#hidespeed").click(function(){
+               
+               $("p").hide("slow"); 
+                
+            });
+            $("#showspeed").click(function(){
+               
+               $("p").show(5000,function(){
+                   alert("paragraf gösterildi")
+               }); 
+                
+            });
+            $("#togglespeed").click(function(){
+               
+               $("p").toggle("slow"); 
+                
+            });
+          
+        });
+        
+        
+        
+        
+    </script>
+
+
+
+</body>
+
+</html>

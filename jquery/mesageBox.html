@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #nav {
+            width: 100%;
+            background-color: lightblue;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid #fff;
+        }
+        
+        #click:hover {
+            cursor: pointer;
+        }
+        
+        #mesaj {
+            width: 100%;
+            background-color:aliceblue;
+            height: 250px;
+            padding: 10px;
+            text-align: center;
+            font-size: 50px;
+            display: none;
+        }
+        #mesaj p{
+            margin:90px auto;
+        }
+        
+        #cikis {
+           position: absolute;
+            right: 10px;
+            font-size: 25px;
+           
+        }
+        #cikis:hover{
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="nav">
+        <span id="click">Mesajınız var</span>
+        <span id="cikis">x</span>
+        
+    </div>
+    <div id="mesaj">
+    <p>Merhaba</p>
+    </div>
+</body>
+
+
+<script>
+    $(document).ready(function() {
+        $("#click").click(function() {
+            $("#mesaj").slideToggle(2000)
+        });
+        $("#cikis").click(function(){
+            $("#nav").hide("slow");
+            $("#mesaj").hide("slow");
+        });
+
+    });
+</script>
+
+
+
+
+
+
+
+
+</html>
